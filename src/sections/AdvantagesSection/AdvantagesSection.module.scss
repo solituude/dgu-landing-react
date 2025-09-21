@@ -1,0 +1,30 @@
+@use 'src/styles/global' as *;
+.AdvantagesSection {
+  display: flex;
+  padding: 48px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  align-self: stretch;
+  background: var(--color-bg-elevated);
+
+  @media (min-width: 1440px) {
+    padding: 3.33rem 1.39rem;
+    gap: 3.33rem;
+  }
+
+  &__H2 {
+    @extend .H2
+  }
+
+  &__Cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 26px;
+
+    @media (min-width: 1440px) {
+      gap: 1.81rem;
+    }
+  }
+}

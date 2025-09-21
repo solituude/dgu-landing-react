@@ -1,0 +1,80 @@
+@use "src/styles/global" as *;
+
+.Card {
+  display: flex;
+  padding: 32px 24px;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 20px;
+  background: var(--overlay-medium);
+  transition: transform 220ms, box-shadow 220ms, background-color 220ms;
+  transform: translateY(0);
+
+  &:hover,
+  &:focus-within {
+    background: var(--overlay-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-brand-weak);
+    transition: transform 200ms, box-shadow 200ms, background-color 200ms;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-brand-strong);
+    transition: transform 200ms;
+  }
+
+
+  @media (min-width: 1440px) {
+    padding: 2.22rem 1.67rem;
+    border-radius: 1.39rem;
+  }
+
+
+  &_light {
+    @extend .Card;
+    background: var(--overlay-light);
+    transition: transform 200ms, box-shadow 200ms, background-color 200ms;
+  }
+
+  &__H3 {
+    width: 100%;
+    color: var(--color-brand-1);
+    text-align: right;
+    font-family: Jura, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    
+    @media (min-width: 1440px) {
+      font-size: 1.67rem;
+    }
+
+    &_light {
+      @extend .Card__H3;
+      text-align: left;
+    }
+  }
+
+  &__Description {
+    @extend .Text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 160px;
+
+    @media (min-width: 1440px) {
+      height: 11.11rem;
+    }
+
+    &_light {
+      @extend .Card__Description;
+      text-align: right;
+    }
+  }
+}

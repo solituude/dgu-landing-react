@@ -1,0 +1,41 @@
+@use "src/styles/global" as *;
+
+.SolutionSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 80px 20px;
+  gap: 78px;
+  background-image: url("../../lib/SolutionImage.png");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 1440px) {
+    padding: 5.56rem 1.39rem;
+
+    gap: 5.42rem;
+  }
+
+  &__H2{
+    @extend .H2;
+  }
+
+  &__Advantages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 44px;
+
+    @media (min-width: 1440px) {
+      gap: 3.06rem;
+    }
+  }
+
+  &__Text {
+    @extend .Text;
+  }
+
+  &__Image {
+    z-index: -1;
+  }
+}

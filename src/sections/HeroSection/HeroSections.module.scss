@@ -1,0 +1,81 @@
+@use 'src/styles/global' as *;
+
+.HeroSection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+
+  height: calc(100vh - 90px);
+
+  box-sizing: border-box;
+  gap: 40px;
+
+  background-image: url("../../lib/image.png");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 1440px) {
+    height: calc(100vh - 6.25rem);
+
+    gap: 2.78rem;
+  }
+
+
+  &__Info {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 80px 20px;
+    gap: 20px;
+
+    @media (min-width: 1024px) {
+      width: 61.25vw;
+      margin-left: 78px;
+      padding-top: 116px;
+      gap: 40px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 61.25rem;
+      margin-left: 5.42rem;
+      padding-top: 8.06rem;
+      gap: 2.78rem;
+    }
+  }
+
+
+  &__Image {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+  }
+
+  &__H1 {
+    color: var(--color-text-primary);
+    font-family: Jura, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+
+    @media(min-width: 576px) {
+      font-size: 48px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 3.33rem;
+    }
+  }
+
+  &__Span {
+    @extend .Text;
+    color: var(--color-text-secondary);
+  }
+}

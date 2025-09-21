@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Header} from "./components/Header/Header";
+import {HeroSections} from "./sections/HeroSection/HeroSections";
+import {AboutSection} from "./sections/AboutSection/AboutSection";
+import {SolutionSection} from "./sections/SolutionSection/SolutionSection";
+import {PathSection} from "./sections/PathSection/PathSection";
+import {AdvantagesSection} from "./sections/AdvantagesSection/AdvantagesSection";
+import {SupportSection} from "./sections/SupportSection/SupportSection";
+import {Footer} from "./components/Footer/Footer";
 
-function App() {
+import "./styles/global.scss";
+import './App.css'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Header/>
+        <main>
+          <HeroSections/>
+          <AboutSection/>
+          <SolutionSection/>
+          <PathSection/>
+          <AdvantagesSection/>
+          <SupportSection/>
+        </main>
+        <Footer/>
+      </div>
   );
 }
-
-export default App;

@@ -1,0 +1,103 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-bg-elevated);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 250ms ease, background-color 250ms ease;
+  
+  @media (min-width: 1024px) {
+    padding: 0 100px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 6.94rem;
+    height: 5.56rem;
+  }
+}
+
+.Header__Logo {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @media (min-width: 1440px) {
+    width: 5.55rem;
+    height: 5.55rem;
+
+    padding: 0.69rem;
+  }
+}
+
+.Header.isScrolled {
+  background-color: rgba(17, 24, 39, 0.9);
+  box-shadow: 0 8px 24px var(--overlay-strong);
+  backdrop-filter: saturate(120%) blur(6px);
+}
+
+/* Пустой класс, чтобы CSS Modules экспортировал isScrolled */
+.isScrolled {}
+
+/* Навигация */
+.Header__Nav {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.Header__List {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 1440px) {
+    gap: 1.39rem;
+  }
+}
+
+.Header__Link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-family: Jura, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  position: relative;
+  transition: color 200ms ease;
+}
+
+.Header__Link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--gradient-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease;
+  border-radius: 2px;
+}
+
+.Header__Link:hover,
+.Header__Link:focus-visible {
+  color: var(--color-text-primary);
+}
+
+.Header__Link:hover::after,
+.Header__Link:focus-visible::after {
+  transform: scaleX(1);
+}
+

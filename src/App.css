@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /* Base palette */
+  --color-bg: #0F172A;              /* slate-900 */
+  --color-bg-elevated: #111827;     /* gray-900 */
+  --color-surface: #1F2937;         /* gray-800 */
+  --color-surface-2: #374151;       /* gray-700 */
+
+  --color-text-primary: #F9FAFB;    /* gray-50 */
+  --color-text-secondary: #E5E7EB;  /* gray-200 */
+
+  /* Brand gradient (sunset coral → raspberry) */
+  --color-brand-1: #FF7A59;         /* was #F88161 */
+  --color-brand-2: #FF4D6D;         /* was #F65063 */
+
+  /* Accents */
+  --color-accent-green: #22C55E;    /* emerald-500 (was #2FFF80) */
+  --color-accent-amber: #F59E0B;    /* amber-500 (was #FFC52F) */
+
+  /* Overlays */
+  --overlay-strong: rgba(0,0,0,0.30);
+  --overlay-medium: rgba(0,0,0,0.20);
+  --overlay-light: rgba(255,255,255,0.14);
+
+  /* Shadows aligned to brand */
+  --shadow-brand-strong: 0 10px 24px rgba(255, 77, 109, 0.35);
+  --shadow-brand-weak: 0 6px 16px rgba(255, 77, 109, 0.28);
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(90deg, var(--color-brand-1) 0%, var(--color-brand-2) 100%);
+  --gradient-path: linear-gradient(90deg, var(--color-accent-green) 0%, var(--color-accent-amber) 100%);
+
+  /* App */
+  font-size: max(16px, 1vw) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html, body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* Глобально: плавная прокрутка и компенсация для sticky header */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Утилита: смещение для якорей под фиксированным хедером на крупных экранах */
+@media (min-width: 1440px) {
+  section[id] {
+    scroll-margin-top: 5.56rem; /* совпадает с высотой хедера в 1440+ */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 1439.98px) {
+  section[id] {
+    scroll-margin-top: 80px; /* высота логотипа на моб/таб */
   }
 }
