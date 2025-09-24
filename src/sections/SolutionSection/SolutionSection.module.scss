@@ -6,9 +6,32 @@
   position: relative;
   padding: 80px 20px;
   gap: 78px;
-  background-image: url("../../lib/SolutionImage.png");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden; /* чтобы блюр не вылезал за края */
+
+  /* Размытый фон с сохранением контуров, без пикселей */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../lib/SolutionImage.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    transform: scale(1.08); /* компенсируем обрезку краёв при blur */
+    will-change: transform, filter;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Мягкое затемнение поверх блюра для читаемости контента */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    // background: linear-gradient(0deg, var(--overlay-medium), transparent 40%, transparent 60%, var(--overlay-medium));
+    z-index: -1;
+    pointer-events: none;
+  }
 
   @media (min-width: 1440px) {
     padding: 5.56rem 1.39rem;

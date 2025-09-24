@@ -12,7 +12,7 @@ export const AboutSection = () => {
             </Reveal>
             <div className={s.AboutSection__Cards}>
                 {CARDS.map(card =>
-                        <Card key={card.id + card.title} id={card.id} description={card.description} title={card.title}/>
+                    <Card key={card.id + card.title} id={card.id} description={card.description} title={card.title}/>
                 )}
             </div>
         </section>

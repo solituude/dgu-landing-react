@@ -22,14 +22,18 @@
 }
 
 .Header__Logo {
-  width: 80px;
-  height: 80px;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 80px;
+  // height: 80px;
+  padding: 0.625rem;
   box-sizing: border-box;
+  
 
   @media (min-width: 1440px) {
-    width: 5.55rem;
-    height: 5.55rem;
+    // width: 5.55rem;
+    // height: 5.55rem;
 
     padding: 0.69rem;
   }

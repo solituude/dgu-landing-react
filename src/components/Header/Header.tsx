@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <header className={`${s.Header} ${isScrolled ? s.isScrolled : ""}`}>
       <div className={s.Header__Logo}>
-        <svg width={256} height={80} viewBox="0 0 512 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="risegTitle risegDesc">
+        <svg width={"16rem"} height={"5rem"} viewBox="0 0 512 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="risegTitle risegDesc">
           <title id="risegTitle">РИСЭГ — логотип</title>
           <desc id="risegDesc">Гексагональный символ с узлами и градиентом, рядом надпись РИСЭГ</desc>
 
