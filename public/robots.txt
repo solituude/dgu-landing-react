@@ -1,3 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
+# Разрешаем индексацию всего сайта
 User-agent: *
-Disallow:
+Allow: /
+
+# Указываем карту сайта
+Sitemap: https://riseg.ru/sitemap.xml

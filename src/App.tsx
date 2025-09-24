@@ -5,6 +5,7 @@ import {SolutionSection} from "./sections/SolutionSection/SolutionSection";
 import {PathSection} from "./sections/PathSection/PathSection";
 import {AdvantagesSection} from "./sections/AdvantagesSection/AdvantagesSection";
 import {SupportSection} from "./sections/SupportSection/SupportSection";
+import {GallerySection} from "./sections/GallerySection/GallerySection";
 import {Footer} from "./components/Footer/Footer";
 
 import "./styles/global.scss";
@@ -20,6 +21,7 @@ export default function App() {
           <SolutionSection/>
           <PathSection/>
           <AdvantagesSection/>
+          <GallerySection/>
           <SupportSection/>
         </main>
         <Footer/>

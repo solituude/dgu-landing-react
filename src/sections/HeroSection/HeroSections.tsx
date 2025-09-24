@@ -12,7 +12,7 @@ export const HeroSections = () => {
     return (
         <section id="hero" className={`${s.HeroSection} ${isMounted ? 'fade-in' : ''}`}>
             <div className={s.HeroSection__Info}>
-                <h1 className={s.HeroSection__H1}>Умное управление <br/> дизель-генераторными установками</h1>
+                <h1 className={s.HeroSection__H1}>РИСЭГ-интеллектуальные решения в энергетике</h1>
 
                 <span className={s.HeroSection__Span}>
                     Наш контроллер управления ДГУ – это интеллектуальная система, которая берет под полный контроль работу дизель-генераторной  установки, защищает оборудование и снижает ваши расходы на 20-30%.

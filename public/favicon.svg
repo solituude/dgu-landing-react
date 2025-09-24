@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="РИСЭГ — фавикон">
+  <defs>
+    <linearGradient id="gradPrimary" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F88161"/>
+      <stop offset="100%" stop-color="#F65063"/>
+    </linearGradient>
+    <linearGradient id="gradAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD1B3"/>
+      <stop offset="100%" stop-color="#F88161"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Фон с легким градиентом и скруглениями, чтобы хорошо смотреться на вкладке -->
+  <rect x="0" y="0" width="128" height="128" rx="24" fill="#242A38"/>
+
+  <!-- Гексагональная эмблема, стилизованная под основной логотип -->
+  <g transform="translate(8,16)">
+    <g stroke="url(#gradPrimary)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M96 48 L76 82 L36 82 L16 48 L36 14 L76 14 Z"/>
+      <path d="M96 48 L76 14"/>
+      <path d="M36 14 L16 48"/>
+      <path d="M36 82 L76 82"/>
+      <path d="M76 14 L36 82"/>
+    </g>
+    <g>
+      <circle cx="96" cy="40" r="5" fill="url(#gradAccent)"/>
+      <circle cx="76" cy="8" r="4.5" fill="url(#gradAccent)"/>
+      <circle cx="36" cy="8" r="4.5" fill="url(#gradAccent)"/>
+      <circle cx="16" cy="40" r="5" fill="url(#gradAccent)"/>
+      <circle cx="36" cy="74" r="4.5" fill="url(#gradAccent)"/>
+      <circle cx="76" cy="74" r="4.5" fill="url(#gradAccent)"/>
+    </g>
+  </g>
+</svg>
+
+
