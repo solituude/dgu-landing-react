@@ -6,6 +6,7 @@ export const Footer = () => {
                 <span className={s.Footer__Subtext}>ООО "РИСЭГ"</span>
                 <span className={s.Footer__Subtext}>ИНН - 6376031392</span>
                 <span className={s.Footer__Subtext}>ОГРН - 1246300030074</span>
+                <span className={s.Footer__Subtext}>Договор № 3569ГССС15-L/99606 от 18.10.2024.</span>
             </div>
             <span className={s.Footer__Subtext}>
                 Проект создан при поддержке Федерального государственного бюджетного учреждения
